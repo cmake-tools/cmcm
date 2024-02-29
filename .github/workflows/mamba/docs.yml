@@ -1,0 +1,7 @@
+---
+name: docs
+channels:
+- conda-forge
+dependencies:
+- python
+- sphinx>=7.1
