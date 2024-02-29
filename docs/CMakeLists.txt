@@ -28,8 +28,8 @@ else()
             DEPENDS "${CMAKE_CURRENT_BINARY_DIR}/conf.py"
             WORKING_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}"
             COMMENT "Generating doc using Sphinx (pdf).")
-    add_custom_target(docs-generate-pdf ${LUALATEX_COMPILER} "${CMAKE_CURRENT_BINARY_DIR}/pdf/cmmm.tex"
-            COMMAND ${LUALATEX_COMPILER} "${CMAKE_CURRENT_BINARY_DIR}/pdf/cmmm.tex"
+    add_custom_target(docs-generate-pdf ${LUALATEX_COMPILER} "${CMAKE_CURRENT_BINARY_DIR}/pdf/cmcm.tex"
+            COMMAND ${LUALATEX_COMPILER} "${CMAKE_CURRENT_BINARY_DIR}/pdf/cmcm.tex"
             DEPENDS docs-pdf
             WORKING_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/pdf"
             COMMENT "Generating pdf using LuaLaTeX.")
@@ -37,7 +37,7 @@ else()
             DEPENDS docs-pdf docs-html docs-generate-pdf
             WORKING_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}"
             COMMENT "Generating doc using Sphinx (all).")
-    install(FILES "${CMAKE_CURRENT_BINARY_DIR}/pdf/cmmm.pdf" DESTINATION "share/doc/pdf")
+    install(FILES "${CMAKE_CURRENT_BINARY_DIR}/pdf/cmcm.pdf" DESTINATION "share/doc/pdf")
   else()
     add_custom_target(docs-all ALL DEPENDS docs-html
             WORKING_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}"
