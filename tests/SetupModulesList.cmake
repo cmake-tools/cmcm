@@ -8,6 +8,7 @@
 #
 
 # Install and set-up CMakeMM
+include_guard(GLOBAL)
 file(DOWNLOAD "https://cmake-tools.github.io/cmmm/latest/GetCMakeMM.cmake" "${CMAKE_CURRENT_BINARY_DIR}/GetCMakeMM.cmake")
 include("${CMAKE_CURRENT_BINARY_DIR}/GetCMakeMM.cmake")
 cmmm(VERSION latest)
