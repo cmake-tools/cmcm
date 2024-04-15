@@ -7,4 +7,6 @@
 # SPDX-License-Identifier: MIT
 #
 
-cmmm_define_module(Colors LOCAL modules/Colors.cmake)
+include(SetupModulesList)
+
+include(Colors)
