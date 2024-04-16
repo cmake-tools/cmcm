@@ -5,7 +5,7 @@ CMakeCM
 
 </h1>
 
-<h4 align="center">CMake's missing Module Manager</h4>
+<h4 align="center">CMake Common Modules</h4>
 
 <h4 align="center">
 
