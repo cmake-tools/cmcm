@@ -10,3 +10,6 @@
 include(SetupModulesList)
 
 include(Colors)
+
+check_color_support(VARIABLE COLOR_SUPPORT)
+message(STATUS "Color support ${COLOR_SUPPORT}")
