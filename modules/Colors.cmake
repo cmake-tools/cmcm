@@ -35,6 +35,7 @@ function(check_color_support)
   # pass
 endfunction()
 
+# Activate colorization
 function(colorize)
   check_color_support(VARIABLE COLOR_SUPPORT)
   if(COLOR_SUPPORT)
