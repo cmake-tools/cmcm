@@ -69,4 +69,4 @@ Makefile
 docs/static/latest
 
 # python cache
-**/__pychache__/
+**/__pycache__/
