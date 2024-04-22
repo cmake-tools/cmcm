@@ -8,8 +8,15 @@
 #
 
 #[=======================================================================[.rst:
-check_color_support
--------------------
+Colors
+------
+
+This module allows to detect color support on terminal and create cached variables to colorize outputs.
+
+Functions
+^^^^^^^^^
+
+.. command:: check_color_support
 
 Detect color support of the terminal. This function respect the NO_COLOR env variable (https://no-color.org/).
 
@@ -17,10 +24,8 @@ Detect color support of the terminal. This function respect the NO_COLOR env var
 
   check_color_support(URL <url>)
 
-Variables
-^^^^^^^^^
+.. cmake:variable:: VARIABLE <variable>
 
-``VARIABLE <variable>
   The variable is set to ``TRUE`` if the terminal support color, else return ``FALSE``
 
 #]=======================================================================]
@@ -52,8 +57,7 @@ function(check_color_support)
 endfunction()
 
 #[=======================================================================[.rst:
-colorize
---------
+.. command:: colorize
 
 Create cached color and style variables.
 
@@ -61,126 +65,231 @@ Create cached color and style variables.
 
   colorize()
 
-Variables
-^^^^^^^^^
-
 If colors are supported in terminal, create CMake cached variables containing style and colors escape sequences.
 
 Some colors can be defined using the ``cmake:envvar::CMMM_COLORS`` (default=0;35:fatal_error=1;31:error=0;31:warn=0;33:info=0;32).
 
 This function respect the NO_COLOR env variable (https://no-color.org/).
 
-The cached variables are :
+.. cmake:variable:: CMCM_DEFAULT_COLOR (CACHE)
 
-.. cmake:variable:: CMCM_DEFAULT_COLOR : Color for default emphase.
+  Color for default emphase.
 
-.. cmake:variable:: CMCM_FATAL_ERROR_COLOR : Color for fatal_error.
+.. cmake:variable:: CMCM_FATAL_ERROR_COLOR (CACHE)
 
-.. cmake:variable:: CMCM_ERROR_COLOR : Color for error.
+  Color for fatal_error.
 
-.. cmake:variable:: CMCM_WARN_COLOR : Color for warning.
+.. cmake:variable:: CMCM_ERROR_COLOR (CACHE)
 
-.. cmake:variable:: CMCM_INFO_COLOR : Color for info.
+  Color for error.
 
-.. cmake:variable:: CMCM_FG_BLACK : Foreground black color.
+.. cmake:variable:: CMCM_WARN_COLOR (CACHE)
 
-``CMCM_FG_RED : Foreground red color.
+  Color for warning.
 
-``CMCM_FG_GREEN : Foreground green color.
+.. cmake:variable:: CMCM_INFO_COLOR (CACHE)
 
-``CMCM_FG_YELLOW : Foreground yellow color.
+  Color for info.
 
-``CMCM_FG_BLUE : Foreground blue color.
+.. cmake:variable:: CMCM_FG_BLACK (CACHE)
 
-``CMCM_FG_MAGENTA : Foreground magenta color.
+  Foreground black color.
 
-``CMCM_FG_CYAN : Foreground cyan color.
+.. cmake:variable:: CMCM_FG_RED (CACHE)
 
-``CMCM_FG_WHITE : Foreground white color.
+  Foreground red color.
 
-``CMCM_FG_BRIGHT_BLACK : Foreground bright black color.
+.. cmake:variable:: CMCM_FG_GREEN (CACHE)
 
-``CMCM_FG_BRIGHT_RED : Foreground bright red color.
+  Foreground green color.
 
-``CMCM_FG_BRIGTH_GREEN : Foreground bright green color.
+.. cmake:variable:: CMCM_FG_YELLOW (CACHE)
 
-``CMCM_FG_BRIGHT_YELLOW : Foreground bright yellow color.
+  Foreground yellow color.
 
-``CMCM_FG_BRIGHT_BLUE : Foreground bright blue color.
+.. cmake:variable:: CMCM_FG_BLUE (CACHE)
 
-``CMCM_FG_BRIGHT_MAGENTA : Foreground bright magenta color.
+  Foreground blue color.
 
-``CMCM_FG_BRIGHT_CYAN : Foreground bright cyan color.
+.. cmake:variable:: CMCM_FG_MAGENTA (CACHE)
 
-``CMCM_FG_BRIGHT_WHITE : Foreground bright white color.
+  Foreground magenta color.
 
-``CMCM_BG_BLACK : Background black color.
+.. cmake:variable:: CMCM_FG_CYAN (CACHE)
 
-``CMCM_BG_RED : Background red color.
+  Foreground cyan color.
 
-``CMCM_BG_GREEN : Background green color.
+.. cmake:variable:: CMCM_FG_WHITE (CACHE)
 
-``CMCM_BG_YELLOW : Background yellow color.
+  Foreground white color.
 
-``CMCM_BG_BLUE : Background blue color.
+.. cmake:variable:: CMCM_FG_BRIGHT_BLACK (CACHE)
 
-``CMCM_BG_MAGENTA : Background magenta color.
+  Foreground bright black color.
 
-``CMCM_BG_CYAN : Background cyan color.
+.. cmake:variable:: CMCM_FG_BRIGHT_RED (CACHE)
 
-``CMCM_BG_WHITE : Background white color.
+  Foreground bright red color.
 
-``CMCM_BG_BRIGHT_BLACK : Background bright black color.
+.. cmake:variable:: CMCM_FG_BRIGTH_GREEN (CACHE)
 
-``CMCM_BG_BRIGHT_RED : Background bright red color.
+  Foreground bright green color.
 
-``CMCM_BG_BRIGTH_GREEN : Background bright green color.
+.. cmake:variable:: CMCM_FG_BRIGHT_YELLOW (CACHE)
 
-``CMCM_BG_BRIGHT_YELLOW : Background bright yellow color.
+  Foreground bright yellow color.
 
-``CMCM_BG_BRIGHT_BLUE : Background bright blue color.
+.. cmake:variable:: CMCM_FG_BRIGHT_BLUE (CACHE)
 
-``CMCM_BG_BRIGHT_MAGENTA : Background bright magenta color.
+  Foreground bright blue color.
 
-``CMCM_BG_BRIGHT_CYAN : Background bright cyan color.
+.. cmake:variable:: CMCM_FG_BRIGHT_MAGENTA (CACHE)
 
-``CMCM_BG_BRIGHT_WHITE : Background bright white color.
+  Foreground bright magenta color.
 
-``CMCM_BOLD : Bold style.
+.. cmake:variable:: CMCM_FG_BRIGHT_CYAN (CACHE)
 
-``CMCM_FAINT : Faint style.
+  Foreground bright cyan color.
 
-``CMCM_ITALIC : Italic style.
+.. cmake:variable:: CMCM_FG_BRIGHT_WHITE (CACHE)
 
-``CMCM_UNDERLINE : Underline style.
+  Foreground bright white color.
 
-``CMCM_BLINK : Blink style.
+.. cmake:variable:: CMCM_BG_BLACK (CACHE)
 
-``CMCM_RAPID_BLINK : Rapid blink style.
+  Background black color.
 
-``CMCM_INVERT : Invert style.
+.. cmake:variable:: CMCM_BG_RED (CACHE)
 
-``CMCM_CONCEAL : Conceal style.
+  Background red color.
 
-``CMCM_CROSSOUT : Crossout style.
+.. cmake:variable:: CMCM_BG_GREEN (CACHE)
 
-``CMCM_UNBOLD : Disable bold style.
+  Background green color.
 
-``CMCM_UNFAINT : Disable faint style.
+.. cmake:variable:: CMCM_BG_YELLOW (CACHE)
 
-``CMCM_UNITALIC : Disable italic style.
+  Background yellow color.
 
-``CMCM_UNUNDERLINE : Disable underline style.
+.. cmake:variable:: CMCM_BG_BLUE (CACHE)
 
-``CMCM_UNBLINK : Disable blink style.
+  Background blue color.
 
-``CMCM_UNRAPID_BLINK : Disable rapid blink style.
+.. cmake:variable:: CMCM_BG_MAGENTA (CACHE)
 
-``CMCM_UNINVERT : Disable invert style.
+  Background magenta color.
 
-``CMCM_UNCONCEAL : Disable conceal style.
+.. cmake:variable:: CMCM_BG_CYAN (CACHE)
 
-``CMCM_UNCROSSOUT : Disable crossout style.
+  Background cyan color.
+
+.. cmake:variable:: CMCM_BG_WHITE (CACHE)
+
+  Background white color.
+
+.. cmake:variable:: CMCM_BG_BRIGHT_BLACK (CACHE)
+
+  Background bright black color.
+
+.. cmake:variable:: CMCM_BG_BRIGHT_RED (CACHE)
+
+  Background bright red color.
+
+.. cmake:variable:: CMCM_BG_BRIGTH_GREEN (CACHE)
+
+  Background bright green color.
+
+.. cmake:variable:: CMCM_BG_BRIGHT_YELLOW (CACHE)
+
+  Background bright yellow color.
+
+.. cmake:variable:: CMCM_BG_BRIGHT_BLUE (CACHE)
+
+  Background bright blue color.
+
+.. cmake:variable:: CMCM_BG_BRIGHT_MAGENTA (CACHE)
+
+  Background bright magenta color.
+
+.. cmake:variable:: CMCM_BG_BRIGHT_CYAN (CACHE)
+
+  Background bright cyan color.
+
+.. cmake:variable:: CMCM_BG_BRIGHT_WHITE (CACHE)
+
+  Background bright white color.
+
+.. cmake:variable:: CMCM_BOLD (CACHE)
+
+  Bold style.
+
+.. cmake:variable:: CMCM_FAINT (CACHE)
+
+  Faint style.
+
+.. cmake:variable:: CMCM_ITALIC (CACHE)
+
+  Italic style.
+
+.. cmake:variable:: CMCM_UNDERLINE (CACHE)
+
+  Underline style.
+
+.. cmake:variable:: CMCM_BLINK (CACHE)
+
+  Blink style.
+
+.. cmake:variable:: CMCM_RAPID_BLINK (CACHE)
+
+  Rapid blink style.
+
+.. cmake:variable:: CMCM_INVERT (CACHE)
+
+  Invert style.
+
+.. cmake:variable:: CMCM_CONCEAL (CACHE)
+
+  Conceal style.
+
+.. cmake:variable:: CMCM_CROSSOUT (CACHE)
+
+  Crossout style.
+
+.. cmake:variable:: CMCM_UNBOLD (CACHE)
+
+  Disable bold style.
+
+.. cmake:variable:: CMCM_UNFAINT (CACHE)
+
+  Disable faint style.
+
+.. cmake:variable:: CMCM_UNITALIC (CACHE)
+
+  Disable italic style.
+
+.. cmake:variable:: CMCM_UNUNDERLINE (CACHE)
+
+  Disable underline style.
+
+.. cmake:variable:: CMCM_UNBLINK (CACHE)
+
+  Disable blink style.
+
+.. cmake:variable:: CMCM_UNRAPID_BLINK (CACHE)
+
+  Disable rapid blink style.
+
+.. cmake:variable:: CMCM_UNINVERT (CACHE)
+
+  Disable invert style.
+
+.. cmake:variable:: CMCM_UNCONCEAL (CACHE)
+
+  Disable conceal style.
+
+.. cmake:variable:: CMCM_UNCROSSOUT (CACHE)
+
+  Disable crossout style.
 
 #]=======================================================================]
 function(colorize)
