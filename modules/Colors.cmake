@@ -8,24 +8,21 @@
 #
 
 #[=======================================================================[.rst:
-Colors
-======
+check_color_support
+-------------------
 
-This module allows to detect if the terminal support colorization and to create variables with escape sequences to colore outputs.
-
-Functions
-^^^^^^^^^
-
-.. command:: check_color_support
+Detect color support of the terminal. This function respect the NO_COLOR env variable (https://no-color.org/).
 
 .. code-block:: cmake
 
   check_color_support(URL <url>)
 
-Detect color support of the terminal. This function respect the ``NO_COLOR`` env variable (https://no-color.org/).
+Variables
+^^^^^^^^^
 
-``VARIABLE <variable>``
+``VARIABLE <variable>
   The variable is set to ``TRUE`` if the terminal support color, else return ``FALSE``
+
 #]=======================================================================]
 function(check_color_support)
   # cmake-lint: disable=C0103
@@ -55,184 +52,136 @@ function(check_color_support)
 endfunction()
 
 #[=======================================================================[.rst:
-.. command:: colorize
+colorize
+--------
+
+Create cached color and style variables.
 
 .. code-block:: cmake
-  
+
   colorize()
 
-Create cached color and style variables. If colors are supported in terminal, create CMake cached variables containing style and colors escape sequences.
+Variables
+^^^^^^^^^
 
-Some colors can be defined using the environment variable ``CMMM_COLORS`` , the default is (default=0;35:fatal_error=1;31:error=0;31:warn=0;33:info=0;32).
+If colors are supported in terminal, create CMake cached variables containing style and colors escape sequences.
 
-This function respect the ``NO_COLOR`` env variable (https://no-color.org/).
+Some colors can be defined using the ``cmake:envvar::CMMM_COLORS`` (default=0;35:fatal_error=1;31:error=0;31:warn=0;33:info=0;32).
+
+This function respect the NO_COLOR env variable (https://no-color.org/).
 
 The cached variables are :
 
-``CMCM_DEFAULT_COLOR``
- Color for default emphase.
+.. cmake:variable:: CMCM_DEFAULT_COLOR : Color for default emphase.
 
-``CMCM_FATAL_ERROR_COLOR``
-  Color for fatal_error.
+.. cmake:variable:: CMCM_FATAL_ERROR_COLOR : Color for fatal_error.
 
-``CMCM_ERROR_COLOR``
-  Color for error.
+.. cmake:variable:: CMCM_ERROR_COLOR : Color for error.
 
-``CMCM_WARN_COLOR``
-  Color for warning.
+.. cmake:variable:: CMCM_WARN_COLOR : Color for warning.
 
-``CMCM_INFO_COLOR``
-  Color for info.
+.. cmake:variable:: CMCM_INFO_COLOR : Color for info.
 
-``CMCM_FG_BLACK``
-  Foreground black color.
+.. cmake:variable:: CMCM_FG_BLACK : Foreground black color.
 
-``CMCM_FG_RED``
-  Foreground red color.
+``CMCM_FG_RED : Foreground red color.
 
-``CMCM_FG_GREEN``
-  Foreground green color.
+``CMCM_FG_GREEN : Foreground green color.
 
-``CMCM_FG_YELLOW``
-  Foreground yellow color.
+``CMCM_FG_YELLOW : Foreground yellow color.
 
-``CMCM_FG_BLUE``
-  Foreground blue color.
+``CMCM_FG_BLUE : Foreground blue color.
 
-``CMCM_FG_MAGENTA``
-  Foreground magenta color.
+``CMCM_FG_MAGENTA : Foreground magenta color.
 
-``CMCM_FG_CYAN``
-  Foreground cyan color.
+``CMCM_FG_CYAN : Foreground cyan color.
 
-``CMCM_FG_WHITE``
-  Foreground white color.
+``CMCM_FG_WHITE : Foreground white color.
 
-``CMCM_FG_BRIGHT_BLACK``
-  Foreground bright black color.
+``CMCM_FG_BRIGHT_BLACK : Foreground bright black color.
 
-``CMCM_FG_BRIGHT_RED``
-  Foreground bright red color.
+``CMCM_FG_BRIGHT_RED : Foreground bright red color.
 
-``CMCM_FG_BRIGTH_GREEN``
-  Foreground bright green color.
+``CMCM_FG_BRIGTH_GREEN : Foreground bright green color.
 
-``CMCM_FG_BRIGHT_YELLOW``
-  Foreground bright yellow color.
+``CMCM_FG_BRIGHT_YELLOW : Foreground bright yellow color.
 
-``CMCM_FG_BRIGHT_BLUE``
-  Foreground bright blue color.
+``CMCM_FG_BRIGHT_BLUE : Foreground bright blue color.
 
-``CMCM_FG_BRIGHT_MAGENTA``
-  Foreground bright magenta color.
+``CMCM_FG_BRIGHT_MAGENTA : Foreground bright magenta color.
 
-``CMCM_FG_BRIGHT_CYAN``
-  Foreground bright cyan color.
+``CMCM_FG_BRIGHT_CYAN : Foreground bright cyan color.
 
-``CMCM_FG_BRIGHT_WHITE``
-  Foreground bright white color.
+``CMCM_FG_BRIGHT_WHITE : Foreground bright white color.
 
-``CMCM_BG_BLACK``
-  Background black color.
+``CMCM_BG_BLACK : Background black color.
 
-``CMCM_BG_RED``
-  Background red color.
+``CMCM_BG_RED : Background red color.
 
-``CMCM_BG_GREEN``
-  Background green color.
+``CMCM_BG_GREEN : Background green color.
 
-``CMCM_BG_YELLOW``
-  Background yellow color.
+``CMCM_BG_YELLOW : Background yellow color.
 
-``CMCM_BG_BLUE``
-  Background blue color.
+``CMCM_BG_BLUE : Background blue color.
 
-``CMCM_BG_MAGENTA``
-  Background magenta color.
+``CMCM_BG_MAGENTA : Background magenta color.
 
-``CMCM_BG_CYAN``
-  Background cyan color.
+``CMCM_BG_CYAN : Background cyan color.
 
-``CMCM_BG_WHITE``
-  Background white color.
+``CMCM_BG_WHITE : Background white color.
 
-``CMCM_BG_BRIGHT_BLACK``
-  Background bright black color.
+``CMCM_BG_BRIGHT_BLACK : Background bright black color.
 
-``CMCM_BG_BRIGHT_RED``
-  Background bright red color.
+``CMCM_BG_BRIGHT_RED : Background bright red color.
 
-``CMCM_BG_BRIGTH_GREEN``
-  Background bright green color.
+``CMCM_BG_BRIGTH_GREEN : Background bright green color.
 
-``CMCM_BG_BRIGHT_YELLOW``
-  Background bright yellow color.
+``CMCM_BG_BRIGHT_YELLOW : Background bright yellow color.
 
-``CMCM_BG_BRIGHT_BLUE``
-  Background bright blue color.
+``CMCM_BG_BRIGHT_BLUE : Background bright blue color.
 
-``CMCM_BG_BRIGHT_MAGENTA``
-  Background bright magenta color.
+``CMCM_BG_BRIGHT_MAGENTA : Background bright magenta color.
 
-``CMCM_BG_BRIGHT_CYAN``
-  Background bright cyan color.
+``CMCM_BG_BRIGHT_CYAN : Background bright cyan color.
 
-``CMCM_BG_BRIGHT_WHITE``
-  Background bright white color.
+``CMCM_BG_BRIGHT_WHITE : Background bright white color.
 
-``CMCM_BOLD``
-  Bold style.
+``CMCM_BOLD : Bold style.
 
-``CMCM_FAINT``
-  Faint style.
+``CMCM_FAINT : Faint style.
 
-``CMCM_ITALIC``
-  Italic style.
+``CMCM_ITALIC : Italic style.
 
-``CMCM_UNDERLINE``
-  Underline style.
+``CMCM_UNDERLINE : Underline style.
 
-``CMCM_BLINK``
-  Blink style.
+``CMCM_BLINK : Blink style.
 
-``CMCM_RAPID_BLINK``
-  Rapid blink style.
+``CMCM_RAPID_BLINK : Rapid blink style.
 
-``CMCM_INVERT``
-  Invert style.
+``CMCM_INVERT : Invert style.
 
-``CMCM_CONCEAL``
-  Conceal style.
+``CMCM_CONCEAL : Conceal style.
 
-``CMCM_CROSSOUT``
-  Crossout style.
+``CMCM_CROSSOUT : Crossout style.
 
-``CMCM_UNBOLD``
-  Disable bold style.
+``CMCM_UNBOLD : Disable bold style.
 
-``CMCM_UNFAINT``
-  Disable faint style.
+``CMCM_UNFAINT : Disable faint style.
 
-``CMCM_UNITALIC``
-  Disable italic style.
+``CMCM_UNITALIC : Disable italic style.
 
-``CMCM_UNUNDERLINE``
-  Disable underline style.
+``CMCM_UNUNDERLINE : Disable underline style.
 
-``CMCM_UNBLINK``
-  Disable blink style.
+``CMCM_UNBLINK : Disable blink style.
 
-``CMCM_UNRAPID_BLINK``
-  Disable rapid blink style.
+``CMCM_UNRAPID_BLINK : Disable rapid blink style.
 
-``CMCM_UNINVERT``
-  Disable invert style.
+``CMCM_UNINVERT : Disable invert style.
 
-``CMCM_UNCONCEAL``
-  Disable conceal style.
+``CMCM_UNCONCEAL : Disable conceal style.
 
-``CMCM_UNCROSSOUT``
-  Disable crossout style.
+``CMCM_UNCROSSOUT : Disable crossout style.
+
 #]=======================================================================]
 function(colorize)
   check_color_support(VARIABLE COLOR_SUPPORT)
