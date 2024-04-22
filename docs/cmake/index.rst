@@ -1,4 +1,7 @@
-CMake Modules
-*************
+Modules
+^^^^^^^
 
-.. cmake-module:: ../../modules/Colors.cmake
+.. toctree::
+    :maxdepth: 1
+
+    /modules/Colors
