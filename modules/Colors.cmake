@@ -71,279 +71,279 @@ Some colors can be defined using the ``cmake:envvar::CMMM_COLORS`` (default=0;35
 
 This function respect the NO_COLOR env variable (https://no-color.org/).
 
-.. cmake:variable:: CMCM_DEFAULT_COLOR (CACHE)
+.. cmake:variable:: CMCM_DEFAULT_COLOR
 
   Color for default emphase.
 
-.. cmake:variable:: CMCM_FATAL_ERROR_COLOR (CACHE)
+.. cmake:variable:: CMCM_FATAL_ERROR_COLOR
 
   Color for fatal_error.
 
-.. cmake:variable:: CMCM_ERROR_COLOR (CACHE)
+.. cmake:variable:: CMCM_ERROR_COLOR
 
   Color for error.
 
-.. cmake:variable:: CMCM_WARN_COLOR (CACHE)
+.. cmake:variable:: CMCM_WARN_COLOR
 
   Color for warning.
 
-.. cmake:variable:: CMCM_INFO_COLOR (CACHE)
+.. cmake:variable:: CMCM_INFO_COLOR
 
   Color for info.
 
-.. cmake:variable:: CMCM_FG_BLACK (CACHE)
+.. cmake:variable:: CMCM_FG_BLACK
 
   Foreground black color.
 
-.. cmake:variable:: CMCM_FG_RED (CACHE)
+.. cmake:variable:: CMCM_FG_RED
 
   Foreground red color.
 
-.. cmake:variable:: CMCM_FG_GREEN (CACHE)
+.. cmake:variable:: CMCM_FG_GREEN
 
   Foreground green color.
 
-.. cmake:variable:: CMCM_FG_YELLOW (CACHE)
+.. cmake:variable:: CMCM_FG_YELLOW
 
   Foreground yellow color.
 
-.. cmake:variable:: CMCM_FG_BLUE (CACHE)
+.. cmake:variable:: CMCM_FG_BLUE
 
   Foreground blue color.
 
-.. cmake:variable:: CMCM_FG_MAGENTA (CACHE)
+.. cmake:variable:: CMCM_FG_MAGENTA
 
   Foreground magenta color.
 
-.. cmake:variable:: CMCM_FG_CYAN (CACHE)
+.. cmake:variable:: CMCM_FG_CYAN
 
   Foreground cyan color.
 
-.. cmake:variable:: CMCM_FG_WHITE (CACHE)
+.. cmake:variable:: CMCM_FG_WHITE
 
   Foreground white color.
 
-.. cmake:variable:: CMCM_FG_BRIGHT_BLACK (CACHE)
+.. cmake:variable:: CMCM_FG_BRIGHT_BLACK
 
   Foreground bright black color.
 
-.. cmake:variable:: CMCM_FG_BRIGHT_RED (CACHE)
+.. cmake:variable:: CMCM_FG_BRIGHT_RED
 
   Foreground bright red color.
 
-.. cmake:variable:: CMCM_FG_BRIGTH_GREEN (CACHE)
+.. cmake:variable:: CMCM_FG_BRIGTH_GREEN
 
   Foreground bright green color.
 
-.. cmake:variable:: CMCM_FG_BRIGHT_YELLOW (CACHE)
+.. cmake:variable:: CMCM_FG_BRIGHT_YELLOW
 
   Foreground bright yellow color.
 
-.. cmake:variable:: CMCM_FG_BRIGHT_BLUE (CACHE)
+.. cmake:variable:: CMCM_FG_BRIGHT_BLUE
 
   Foreground bright blue color.
 
-.. cmake:variable:: CMCM_FG_BRIGHT_MAGENTA (CACHE)
+.. cmake:variable:: CMCM_FG_BRIGHT_MAGENTA
 
   Foreground bright magenta color.
 
-.. cmake:variable:: CMCM_FG_BRIGHT_CYAN (CACHE)
+.. cmake:variable:: CMCM_FG_BRIGHT_CYAN
 
   Foreground bright cyan color.
 
-.. cmake:variable:: CMCM_FG_BRIGHT_WHITE (CACHE)
+.. cmake:variable:: CMCM_FG_BRIGHT_WHITE
 
   Foreground bright white color.
 
-.. cmake:variable:: CMCM_BG_BLACK (CACHE)
+.. cmake:variable:: CMCM_BG_BLACK
 
   Background black color.
 
-.. cmake:variable:: CMCM_BG_RED (CACHE)
+.. cmake:variable:: CMCM_BG_RED
 
   Background red color.
 
-.. cmake:variable:: CMCM_BG_GREEN (CACHE)
+.. cmake:variable:: CMCM_BG_GREEN
 
   Background green color.
 
-.. cmake:variable:: CMCM_BG_YELLOW (CACHE)
+.. cmake:variable:: CMCM_BG_YELLOW
 
   Background yellow color.
 
-.. cmake:variable:: CMCM_BG_BLUE (CACHE)
+.. cmake:variable:: CMCM_BG_BLUE
 
   Background blue color.
 
-.. cmake:variable:: CMCM_BG_MAGENTA (CACHE)
+.. cmake:variable:: CMCM_BG_MAGENTA
 
   Background magenta color.
 
-.. cmake:variable:: CMCM_BG_CYAN (CACHE)
+.. cmake:variable:: CMCM_BG_CYAN
 
   Background cyan color.
 
-.. cmake:variable:: CMCM_BG_WHITE (CACHE)
+.. cmake:variable:: CMCM_BG_WHITE
 
   Background white color.
 
-.. cmake:variable:: CMCM_BG_BRIGHT_BLACK (CACHE)
+.. cmake:variable:: CMCM_BG_BRIGHT_BLACK
 
   Background bright black color.
 
-.. cmake:variable:: CMCM_BG_BRIGHT_RED (CACHE)
+.. cmake:variable:: CMCM_BG_BRIGHT_RED
 
   Background bright red color.
 
-.. cmake:variable:: CMCM_BG_BRIGTH_GREEN (CACHE)
+.. cmake:variable:: CMCM_BG_BRIGTH_GREEN
 
   Background bright green color.
 
-.. cmake:variable:: CMCM_BG_BRIGHT_YELLOW (CACHE)
+.. cmake:variable:: CMCM_BG_BRIGHT_YELLOW
 
   Background bright yellow color.
 
-.. cmake:variable:: CMCM_BG_BRIGHT_BLUE (CACHE)
+.. cmake:variable:: CMCM_BG_BRIGHT_BLUE
 
   Background bright blue color.
 
-.. cmake:variable:: CMCM_BG_BRIGHT_MAGENTA (CACHE)
+.. cmake:variable:: CMCM_BG_BRIGHT_MAGENTA
 
   Background bright magenta color.
 
-.. cmake:variable:: CMCM_BG_BRIGHT_CYAN (CACHE)
+.. cmake:variable:: CMCM_BG_BRIGHT_CYAN
 
   Background bright cyan color.
 
-.. cmake:variable:: CMCM_BG_BRIGHT_WHITE (CACHE)
+.. cmake:variable:: CMCM_BG_BRIGHT_WHITE
 
   Background bright white color.
 
-.. cmake:variable:: CMCM_BOLD (CACHE)
+.. cmake:variable:: CMCM_BOLD
 
   Bold style.
 
-.. cmake:variable:: CMCM_FAINT (CACHE)
+.. cmake:variable:: CMCM_FAINT
 
   Faint style.
 
-.. cmake:variable:: CMCM_ITALIC (CACHE)
+.. cmake:variable:: CMCM_ITALIC
 
   Italic style.
 
-.. cmake:variable:: CMCM_UNDERLINE (CACHE)
+.. cmake:variable:: CMCM_UNDERLINE
 
   Underline style.
 
-.. cmake:variable:: CMCM_BLINK (CACHE)
+.. cmake:variable:: CMCM_BLINK
 
   Blink style.
 
-.. cmake:variable:: CMCM_RAPID_BLINK (CACHE)
+.. cmake:variable:: CMCM_RAPID_BLINK
 
   Rapid blink style.
 
-.. cmake:variable:: CMCM_INVERT (CACHE)
+.. cmake:variable:: CMCM_INVERT
 
   Invert style.
 
-.. cmake:variable:: CMCM_CONCEAL (CACHE)
+.. cmake:variable:: CMCM_CONCEAL
 
   Conceal style.
 
-.. cmake:variable:: CMCM_CROSSOUT (CACHE)
+.. cmake:variable:: CMCM_CROSSOUT
 
   Crossout style.
 
-.. cmake:variable:: CMCM_DOUBLY_UNDERLINE (CACHE)
+.. cmake:variable:: CMCM_DOUBLY_UNDERLINE
 
   Doubly underline style.
 
-.. cmake:variable:: CMCM_UNBOLD (CACHE)
+.. cmake:variable:: CMCM_UNBOLD
 
   Disable bold style.
 
-.. cmake:variable:: CMCM_UNFAINT (CACHE)
+.. cmake:variable:: CMCM_UNFAINT
 
   Disable faint style.
 
-.. cmake:variable:: CMCM_UNITALIC (CACHE)
+.. cmake:variable:: CMCM_UNITALIC
 
   Disable italic style.
 
-.. cmake:variable:: CMCM_UNUNDERLINE (CACHE)
+.. cmake:variable:: CMCM_UNUNDERLINE
 
   Disable underline style.
 
-.. cmake:variable:: CMCM_UNDOUBLY_UNDERLINE (CACHE)
+.. cmake:variable:: CMCM_UNDOUBLY_UNDERLINE
 
   Disable doubly underline style.
 
-.. cmake:variable:: CMCM_UNBLINK (CACHE)
+.. cmake:variable:: CMCM_UNBLINK
 
   Disable blink style.
 
-.. cmake:variable:: CMCM_UNRAPID_BLINK (CACHE)
+.. cmake:variable:: CMCM_UNRAPID_BLINK
 
   Disable rapid blink style.
 
-.. cmake:variable:: CMCM_UNINVERT (CACHE)
+.. cmake:variable:: CMCM_UNINVERT
 
   Disable invert style.
 
-.. cmake:variable:: CMCM_UNCONCEAL (CACHE)
+.. cmake:variable:: CMCM_UNCONCEAL
 
   Disable conceal style.
 
-.. cmake:variable:: CMCM_UNCROSSOUT (CACHE)
+.. cmake:variable:: CMCM_UNCROSSOUT
 
   Disable crossout style.
 
-.. cmake:variable:: CMCM_RESET_STYLE (CACHE)
+.. cmake:variable:: CMCM_RESET_STYLE
 
   Reset style and color.
 
-.. cmake:variable:: CMCM_DEFAULT_FONT (CACHE)
+.. cmake:variable:: CMCM_DEFAULT_FONT
 
   Reset to default font.
 
-.. cmake:variable:: CMCM_FONT1 (CACHE)
+.. cmake:variable:: CMCM_FONT1
 
   Font 1.
 
-.. cmake:variable:: CMCM_FONT2 (CACHE)
+.. cmake:variable:: CMCM_FONT2
 
   Font 2.
 
-.. cmake:variable:: CMCM_FONT3 (CACHE)
+.. cmake:variable:: CMCM_FONT3
 
   Font 3.
 
-.. cmake:variable:: CMCM_FONT4 (CACHE)
+.. cmake:variable:: CMCM_FONT4
 
   Font 4.
 
-.. cmake:variable:: CMCM_FONT5 (CACHE)
+.. cmake:variable:: CMCM_FONT5
 
   Font 5.
 
-.. cmake:variable:: CMCM_FONT6 (CACHE)
+.. cmake:variable:: CMCM_FONT6
 
   Font 6.
 
-.. cmake:variable:: CMCM_FONT7 (CACHE)
+.. cmake:variable:: CMCM_FONT7
 
   Font 7.
 
-.. cmake:variable:: CMCM_FONT8 (CACHE)
+.. cmake:variable:: CMCM_FONT8
 
   Font 8.
 
-.. cmake:variable:: CMCM_FONT9 (CACHE)
+.. cmake:variable:: CMCM_FONT9
 
   Font 9.
 
-.. cmake:variable:: CMCM_FRAKTUR (CACHE)
+.. cmake:variable:: CMCM_FRAKTUR
 
   Fraktur font.
 
