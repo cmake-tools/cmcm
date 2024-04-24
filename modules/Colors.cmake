@@ -255,6 +255,10 @@ This function respect the NO_COLOR env variable (https://no-color.org/).
 
   Crossout style.
 
+.. cmake:variable:: CMCM_DOUBLY_UNDERLINE (CACHE)
+
+  Doubly underline style.
+
 .. cmake:variable:: CMCM_UNBOLD (CACHE)
 
   Disable bold style.
@@ -270,6 +274,10 @@ This function respect the NO_COLOR env variable (https://no-color.org/).
 .. cmake:variable:: CMCM_UNUNDERLINE (CACHE)
 
   Disable underline style.
+
+.. cmake:variable:: CMCM_UNDOUBLY_UNDERLINE (CACHE)
+
+  Disable doubly underline style.
 
 .. cmake:variable:: CMCM_UNBLINK (CACHE)
 
@@ -290,6 +298,54 @@ This function respect the NO_COLOR env variable (https://no-color.org/).
 .. cmake:variable:: CMCM_UNCROSSOUT (CACHE)
 
   Disable crossout style.
+
+.. cmake:variable:: CMCM_RESET_STYLE (CACHE)
+
+  Reset style and color.
+
+.. cmake:variable:: CMCM_DEFAULT_FONT (CACHE)
+
+  Reset to default font.
+
+.. cmake:variable:: CMCM_FONT1 (CACHE)
+
+  Font 1.
+
+.. cmake:variable:: CMCM_FONT2 (CACHE)
+
+  Font 2.
+
+.. cmake:variable:: CMCM_FONT3 (CACHE)
+
+  Font 3.
+
+.. cmake:variable:: CMCM_FONT4 (CACHE)
+
+  Font 4.
+
+.. cmake:variable:: CMCM_FONT5 (CACHE)
+
+  Font 5.
+
+.. cmake:variable:: CMCM_FONT6 (CACHE)
+
+  Font 6.
+
+.. cmake:variable:: CMCM_FONT7 (CACHE)
+
+  Font 7.
+
+.. cmake:variable:: CMCM_FONT8 (CACHE)
+
+  Font 8.
+
+.. cmake:variable:: CMCM_FONT9 (CACHE)
+
+  Font 9.
+
+.. cmake:variable:: CMCM_FRAKTUR (CACHE)
+
+  Fraktur font.
 
 #]=======================================================================]
 function(colorize)
@@ -354,6 +410,7 @@ function(colorize)
     set(CMCM_UNFAINT "${CMCM_ESC}[22m" CACHE INTERNAL "Disable faint style")
     set(CMCM_UNITALIC "${CMCM_ESC}[23m" CACHE INTERNAL "Disable italic style")
     set(CMCM_UNUNDERLINE "${CMCM_ESC}[24m" CACHE INTERNAL "Disable underline style")
+    set(CMCM_UNDOUBLY_UNDERLINE "${CMCM_ESC}[24m" CACHE INTERNAL "Disable underline style")
     set(CMCM_UNBLINK "${CMCM_ESC}[25m" CACHE INTERNAL "Disable blink style")
     set(CMCM_UNRAPID_BLINK "${CMCM_ESC}[25m" CACHE INTERNAL "Disable rapid blink style")
     set(CMCM_UNINVERT "${CMCM_ESC}[27m" CACHE INTERNAL "Disable invert style")
