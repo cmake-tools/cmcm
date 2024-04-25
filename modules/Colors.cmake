@@ -123,6 +123,38 @@ This function respect the NO_COLOR env variable (https://no-color.org/).
 
   Foreground white color.
 
+.. cmake:variable:: CMCM_FG_BOLD_BLACK
+
+  Foreground bold black color.
+
+.. cmake:variable:: CMCM_FG_BOLD_RED
+
+  Foreground bold red color.
+
+.. cmake:variable:: CMCM_FG_BOLD_GREEN
+
+  Foreground bold green color.
+
+.. cmake:variable:: CMCM_FG_BOLD_YELLOW
+
+  Foreground bold yellow color.
+
+.. cmake:variable:: CMCM_FG_BOLD_BLUE
+
+  Foreground bold blue color.
+
+.. cmake:variable:: CMCM_FG_BOLD_MAGENTA
+
+  Foreground bold magenta color.
+
+.. cmake:variable:: CMCM_FG_BOLD_CYAN
+
+  Foreground bold cyan color.
+
+.. cmake:variable:: CMCM_FG_BOLD_WHITE
+
+  Foreground bold white color.
+
 .. cmake:variable:: CMCM_FG_BRIGHT_BLACK
 
   Foreground bright black color.
@@ -186,6 +218,38 @@ This function respect the NO_COLOR env variable (https://no-color.org/).
 .. cmake:variable:: CMCM_BG_WHITE
 
   Background white color.
+
+.. cmake:variable:: CMCM_BG_BOLD_BLACK
+
+  Background bold black color.
+
+.. cmake:variable:: CMCM_BG_BOLD_RED
+
+  Background bold red color.
+
+.. cmake:variable:: CMCM_BG_BOLD_GREEN
+
+  Background bold green color.
+
+.. cmake:variable:: CMCM_BG_BOLD_YELLOW
+
+  Background bold yellow color.
+
+.. cmake:variable:: CMCM_BG_BOLD_BLUE
+
+  Background bold blue color.
+
+.. cmake:variable:: CMCM_BG_BOLD_MAGENTA
+
+  Background bold magenta color.
+
+.. cmake:variable:: CMCM_BG_BOLD_CYAN
+
+  Background bold cyan color.
+
+.. cmake:variable:: CMCM_BG_BOLD_WHITE
+
+  Background bold white color.
 
 .. cmake:variable:: CMCM_BG_BRIGHT_BLACK
 
@@ -425,6 +489,14 @@ function(colorize)
     set(CMCM_FG_MAGENTA "${CMCM_ESC}[35m" PARENT_SCOPE)
     set(CMCM_FG_CYAN "${CMCM_ESC}[36m" PARENT_SCOPE)
     set(CMCM_FG_WHITE "${CMCM_ESC}[37m" PARENT_SCOPE)
+    set(CMCM_FG_BOLD_BLACK "${CMCM_ESC}[1;30m" PARENT_SCOPE)
+    set(CMCM_FG_BOLD_RED "${CMCM_ESC}[1;31m" PARENT_SCOPE)
+    set(CMCM_FG_BOLD_GREEN "${CMCM_ESC}[1;32m" PARENT_SCOPE)
+    set(CMCM_FG_BOLD_YELLOW "${CMCM_ESC}[1;33m" PARENT_SCOPE)
+    set(CMCM_FG_BOLD_BLUE "${CMCM_ESC}[1;34m" PARENT_SCOPE)
+    set(CMCM_FG_BOLD_MAGENTA "${CMCM_ESC}[1;35m" PARENT_SCOPE)
+    set(CMCM_FG_BOLD_CYAN "${CMCM_ESC}[1;36m" PARENT_SCOPE)
+    set(CMCM_FG_BOLD_WHITE "${CMCM_ESC}[1;37m" PARENT_SCOPE)
     set(CMCM_FG_BRIGHT_BLACK "${CMCM_ESC}[90m" PARENT_SCOPE)
     set(CMCM_FG_BRIGHT_RED "${CMCM_ESC}[91m" PARENT_SCOPE)
     set(CMCM_FG_BRIGTH_GREEN "${CMCM_ESC}[92m" PARENT_SCOPE)
@@ -442,6 +514,14 @@ function(colorize)
     set(CMCM_BG_MAGENTA "${CMCM_ESC}[45m" PARENT_SCOPE)
     set(CMCM_BG_CYAN "${CMCM_ESC}[46m" PARENT_SCOPE)
     set(CMCM_BG_WHITE "${CMCM_ESC}[47m" PARENT_SCOPE)
+    set(CMCM_BG_BOLD_BLACK "${CMCM_ESC}[1;40m" PARENT_SCOPE)
+    set(CMCM_BG_BOLD_RED "${CMCM_ESC}[1;41m" PARENT_SCOPE)
+    set(CMCM_BG_BOLD_GREEN "${CMCM_ESC}[1;42m" PARENT_SCOPE)
+    set(CMCM_BG_BOLD_YELLOW "${CMCM_ESC}[1;43m" PARENT_SCOPE)
+    set(CMCM_BG_BOLD_BLUE "${CMCM_ESC}[1;44m" PARENT_SCOPE)
+    set(CMCM_BG_BOLD_MAGENTA "${CMCM_ESC}[1;45m" PARENT_SCOPE)
+    set(CMCM_BG_BOLD_CYAN "${CMCM_ESC}[1;46m" PARENT_SCOPE)
+    set(CMCM_BG_BOLD_WHITE "${CMCM_ESC}[1;47m" PARENT_SCOPE)
     set(CMCM_BG_BRIGHT_BLACK "${CMCM_ESC}[100m" PARENT_SCOPE)
     set(CMCM_BG_BRIGHT_RED "${CMCM_ESC}[101m" PARENT_SCOPE)
     set(CMCM_BG_BRIGTH_GREEN "${CMCM_ESC}[102m" PARENT_SCOPE)
