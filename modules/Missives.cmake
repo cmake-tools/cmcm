@@ -23,7 +23,8 @@ list(APPEND MISSIVE_TYPES ${DEFAULT_MISSIVE_TYPES})
 
 # TODO: explain
 function(missive_type)
-  cmake_parse_arguments(PARSE_ARGV 0 ARG "" "NAME;PARENT_TYPE;STYLE;APPEND_BEGIN;APPEND_END;APPEND_STYLE;APPEND_STYLE_BEGIN;APPEND_STYLE_END" "")
+  include(CMakeParseArguments)
+  cmake_parse_arguments(ARG "" "NAME;PARENT_TYPE;STYLE;APPEND_BEGIN;APPEND_END;APPEND_STYLE;APPEND_STYLE_BEGIN;APPEND_STYLE_END" "" ${ARGN})
   if(NOT DEFINED ARG_NAME)
     message(FATAL_ERROR "${CMCM_FATAL_ERROR_COLOR}NAME is mandatory !${CMCM_RESET_STYLE}")
   endif()
@@ -132,7 +133,6 @@ endfunction()
 # TODO: explain
 function(restore_all_types_to_default)
   foreach(TYPE IN LISTS DEFAULT_MISSIVE_TYPES)
-    message(STATUS "TYPE ${TYPE}")
     restore_type_to_default(${TYPE})
   endforeach()
 endfunction()
@@ -144,11 +144,12 @@ set(CMCM_TO_DEFAULT "[===CMCM::RESET::DEFAULT===]")
 
 # TODO: explain
 function(missive)
+  include(CMakeParseArguments)
   if("${ARGC}" STREQUAL "0")
     message(FATAL_ERROR "${CMCM_FATAL_ERROR_COLOR}missive called with incorrect number of arguments${CMCM_RESET_STYLE}")
   endif()
 
-  cmake_parse_arguments(PARSE_ARGV 0 ARG "" "" "")
+  cmake_parse_arguments(ARG "" "" "" ${ARGN})
   list(LENGTH ARG_UNPARSED_ARGUMENTS SIZE)
   if(NOT "${SIZE}" STREQUAL "0")
     list(GET ARG_UNPARSED_ARGUMENTS 0 MISSIVE_TYPE)
