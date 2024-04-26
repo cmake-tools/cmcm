@@ -6,6 +6,7 @@
 #
 # SPDX-License-Identifier: MIT
 #
+cmake_policy(VERSION ${CMAKE_VERSION})
 
 include(SetupModulesList)
 

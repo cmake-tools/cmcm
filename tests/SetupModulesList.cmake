@@ -6,6 +6,7 @@
 #
 # SPDX-License-Identifier: MIT
 #
+cmake_policy(VERSION ${CMAKE_VERSION})
 
 # Install and set-up CMakeMM
 file(DOWNLOAD "https://cmake-tools.github.io/cmmm/latest/GetCMakeMM.cmake" "${CMAKE_CURRENT_BINARY_DIR}/GetCMakeMM.cmake")

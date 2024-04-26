@@ -11,6 +11,7 @@ include(Colors)
 colorize()
 
 cmake_policy(PUSH)
+cmake_policy(SET CMP0011 NEW)
 cmake_policy(SET CMP0007 NEW)
 
 # CMake default message groups
