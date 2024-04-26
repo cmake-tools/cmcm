@@ -51,5 +51,5 @@ jobs:
       run: cmake -S ${{ env.CMAKE_SOURCE_PREFIX }} -B ${{ env.CMAKE_BINARY_PREFIX }} -G "Ninja Multi-Config" -Werror=dev -Werror=deprecated -DBUILD_DOCS=${{ env.BUILD_DOCS }}
 
     - name: 🧪 Test
-      run: ctest -C ${{ env.CMAKE_BUILD_TYPE }} --output-on-failure
+      run: ctest -C ${{ env.CMAKE_BUILD_TYPE }} -VV --output-on-failure
       working-directory: ${{ env.CMAKE_BINARY_PREFIX }}
