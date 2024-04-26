@@ -31,6 +31,7 @@ function(missive_type)
   endif()
   string(TOUPPER ${ARG_NAME} UPPER_ARG_NAME)
   if(NOT ${ARG_NAME} STREQUAL ${UPPER_ARG_NAME})
+    message(STATUS "TEST: ${ARG_NAME} ${UPPER_ARG_NAME}")
     message(FATAL_ERROR "${CMCM_FATAL_ERROR_COLOR}NAME is not an upper case word !${CMCM_RESET_STYLE}")
   endif()
 
