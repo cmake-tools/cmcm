@@ -40,16 +40,16 @@ jobs:
 
     - name: 🔧 Generate with v3.${{ matrix.cmake_version }}
       if: ${{ matrix.cmake_version < 13 }}
-      run: cmake -E make_directory ${{ env.CMAKE_BINARY_PREFIX }}; cmake -E chdir ${{ env.CMAKE_BINARY_PREFIX }} cmake -G "Ninja" -Werror=dev -Werror=deprecated -DCMAKE_BUILD_TYPE=${{ env.CMAKE_BUILD_TYPE }}  ${{ github.workspace }}/${{ env.CMAKE_SOURCE_PREFIX
+      run: cmake -E make_directory ${{ env.CMAKE_BINARY_PREFIX }}; cmake -E chdir ${{ env.CMAKE_BINARY_PREFIX }} cmake -G "Ninja" -Werror=dev -Werror=deprecated -DCMAKE_BUILD_TYPE=${{ env.CMAKE_BUILD_TYPE }} -DCMAKE_BUILD_DOCS=${{ env.BUILD_DOCS }} ${{ github.workspace }}/${{ env.CMAKE_SOURCE_PREFIX
         }}
 
     - name: 🔧 Generate with v3.${{ matrix.cmake_version }}
       if: ${{ matrix.cmake_version >= 13 &&  matrix.cmake_version < 17 }}
-      run: cmake -S ${{ env.CMAKE_SOURCE_PREFIX }} -B ${{ env.CMAKE_BINARY_PREFIX }} -G "Ninja" -Werror=dev -Werror=deprecated -DCMAKE_BUILD_TYPE=${{ env.CMAKE_BUILD_TYPE }}
+      run: cmake -S ${{ env.CMAKE_SOURCE_PREFIX }} -B ${{ env.CMAKE_BINARY_PREFIX }} -G "Ninja" -Werror=dev -Werror=deprecated -DCMAKE_BUILD_TYPE=${{ env.CMAKE_BUILD_TYPE }} -DCMAKE_BUILD_DOCS=${{ env.BUILD_DOCS }}
 
     - name: 🔧 Generate with v3.${{ matrix.cmake_version }}
       if: ${{ matrix.cmake_version >= 17 }}
-      run: cmake -S ${{ env.CMAKE_SOURCE_PREFIX }} -B ${{ env.CMAKE_BINARY_PREFIX }} -G "Ninja Multi-Config" -Werror=dev -Werror=deprecated
+      run: cmake -S ${{ env.CMAKE_SOURCE_PREFIX }} -B ${{ env.CMAKE_BINARY_PREFIX }} -G "Ninja Multi-Config" -Werror=dev -Werror=deprecated -DCMAKE_BUILD_DOCS=${{ env.BUILD_DOCS }}
 
     - name: 🧪 Test
       run: ctest -C ${{ env.CMAKE_BUILD_TYPE }} --output-on-failure
