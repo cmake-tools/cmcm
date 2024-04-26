@@ -132,6 +132,7 @@ endfunction()
 # TODO: explain
 function(restore_all_types_to_default)
   foreach(TYPE IN LISTS DEFAULT_MISSIVE_TYPES)
+    message(STATUS "TYPE ${TYPE}")
     restore_type_to_default(${TYPE})
   endforeach()
 endfunction()
