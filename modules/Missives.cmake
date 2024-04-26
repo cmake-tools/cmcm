@@ -185,7 +185,7 @@ function(missive)
       get_property(STYLE GLOBAL PROPERTY "NOTICE_STYLE")
       string(REPLACE "${CMCM_TO_DEFAULT}" "${${STYLE}}" ARG_UNPARSED_ARGUMENTS ${ARG_UNPARSED_ARGUMENTS})
     endif()
-    message("${ARGV}")
+    message("" ${ARG_UNPARSED_ARGUMENTS})
   endif()
 endfunction()
 
