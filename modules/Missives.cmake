@@ -1,3 +1,12 @@
+#
+# CMakeCM
+# CMake Common Modules.
+#
+# SPDX-FileCopyrightText: 2024 flagarde
+#
+# SPDX-License-Identifier: MIT
+#
+
 include(Colors)
 colorize()
 
@@ -9,6 +18,7 @@ list(APPEND DEFAULT_MISSIVE_TYPES "FATAL_ERROR;SEND_ERROR;WARNING;AUTHOR_WARNING
 
 list(APPEND MISSIVE_TYPES ${DEFAULT_MISSIVE_TYPES})
 
+# TODO: explain
 function(missive_type)
   cmake_parse_arguments(PARSE_ARGV 0 ARG "" "NAME;PARENT_TYPE;STYLE;APPEND_BEGIN;APPEND_END;APPEND_STYLE;APPEND_STYLE_BEGIN;APPEND_STYLE_END" "")
   if(NOT DEFINED ARG_NAME)
@@ -115,6 +125,7 @@ function(restore_type_to_default TYPE)
   endif()
 endfunction()
 
+# TODO: explain
 function(restore_all_types_to_default)
   foreach(TYPE IN LISTS DEFAULT_MISSIVE_TYPES)
     restore_type_to_default(${TYPE})
@@ -126,6 +137,7 @@ restore_all_types_to_default()
 
 set(CMCM_TO_DEFAULT "[===CMCM::RESET::DEFAULT===]")
 
+# TODO: explain
 function(missive)
   if("${ARGC}" STREQUAL "0")
     message(FATAL_ERROR "${CMCM_FATAL_ERROR_COLOR}missive called with incorrect number of arguments${CMCM_RESET_STYLE}")

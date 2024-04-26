@@ -53,7 +53,6 @@ message(DEPRECATION "Test" "Test")
 missive(DEPRECATION "Test" "Test")
 message(STATUS "==============================\n")
 
-
 message(STATUS "==== Test NOTICE =====")
 message(NOTICE)
 missive(NOTICE)
@@ -85,7 +84,6 @@ missive(STATUS "Test")
 message(STATUS "Test" "Test")
 missive(STATUS "Test" "Test")
 message(STATUS "==============================\n")
-
 
 message(STATUS "==== Test VERBOSE =====")
 message(VERBOSE)
