@@ -10,7 +10,7 @@ cmake_policy(VERSION ${CMAKE_VERSION})
 
 include(SetupModulesList)
 
-include("/home/working/Projects/cmcm/modules/Missives.cmake")
+include(Missives)
 
 # message and missive give error if called without argument
 # FATAL_ERROR and SEND_ERROR are not tested here
