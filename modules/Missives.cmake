@@ -2,7 +2,7 @@
 # CMakeCM
 # CMake Common Modules.
 #
-# SPDX-FileCopyrightText: 2024 flagarde
+# SPDX-FileCopyrightText: 2024-2025 flagarde
 #
 # SPDX-License-Identifier: MIT
 #
