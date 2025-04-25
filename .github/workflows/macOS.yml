@@ -30,10 +30,10 @@ jobs:
       run: echo SSL_CERT_FILE=/opt/local/share/curl/curl-ca-bundle.crt >> $GITHUB_ENV
 
     - name: 📂 Load .env file
-      if: hashFiles('.github/workflows/.env') != ''
+      if: hashFiles('.github/workflows/env/.env') != ''
       uses: xom9ikk/dotenv@v2
       with:
-        path: .github/workflows
+        path: .github/workflows/env
 
     - name: ⬇️ Setup CMake
       uses: lukka/get-cmake@latest

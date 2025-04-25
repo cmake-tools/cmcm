@@ -21,7 +21,7 @@ jobs:
     - name: 📥 Checkout
       uses: actions/checkout@v4
     - name: 📂 Load .env file
-      if: hashFiles('.github/workflows/.env') != ''
+      if: hashFiles('.github/workflows/env/.env') != ''
       uses: xom9ikk/dotenv@v2
       with:
         path: .github/workflows
@@ -29,7 +29,7 @@ jobs:
       id: check_file
       uses: andstor/file-existence-action@v3
       with:
-        files: .github/workflows/.env.${{ github.workflow }}
+        files: .github/workflows/env/.env.${{ github.workflow }}
     - name: 📂 Load .env.${{ github.workflow }} file
       if: steps.check_file.outputs.files_exists == 'true'
       uses: xom9ikk/dotenv@v2
@@ -42,7 +42,7 @@ jobs:
         echo "matrix=${{ env.MATRIX }}" >> "$GITHUB_OUTPUT"
   run:
     name: CMake v${{ matrix.cmake_version }}
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.runs-on }}
     needs: read_params
     strategy:
       fail-fast: false
