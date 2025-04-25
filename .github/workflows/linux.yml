@@ -79,7 +79,7 @@ jobs:
         ninjaVersion: ~1
 
     - name: ⚙️ run-cmake (configure)
-      uses: run-cmake@v0-alpha
+      uses: cmake-tools/run-cmake@v0-alpha
       id: configure
       with:
         mode: configure
@@ -89,7 +89,7 @@ jobs:
         binary_dir: ${{ env.CMAKE_BINARY_PREFIX }}
         configure_warnings: developer
         list_cache_variables: advanced_help
-        variable: |
+        variables: |
           CMAKE_BUILD_TYPE:STRING=${{ env.CMAKE_BUILD_TYPE }}
 
     - name: 🛠️ run-cmake (build)
