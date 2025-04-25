@@ -13,7 +13,7 @@ concurrency:
 
 jobs:
   run:
-    name: CMake v${{ matrix.cmake_version }} (${{ matrix.runs_on }})
+    name: CMake v${{ matrix.cmake_version }}
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false

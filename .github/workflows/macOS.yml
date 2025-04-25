@@ -13,8 +13,8 @@ concurrency:
 
 jobs:
   test:
-    name: CMake v3.${{ matrix.cmake_version }}
-    runs-on: macos-12
+    name: CMake v${{ matrix.cmake_version }}
+    runs-on: macos-latest
     strategy:
       fail-fast: false
       matrix:
