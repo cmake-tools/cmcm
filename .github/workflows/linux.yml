@@ -51,7 +51,7 @@ jobs:
     - name: ⬇️ Setup CMake
       uses: lukka/get-cmake@latest
       with:
-        cmakeVersion: ~3.${{ matrix.cmake_version }}
+        cmakeVersion: ~${{ matrix.cmake_version }}
         ninjaVersion: ^1.11.1
 
     - name: 🔧 Generate with v3.${{ matrix.cmake_version }}
