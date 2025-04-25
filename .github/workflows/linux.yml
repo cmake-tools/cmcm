@@ -12,8 +12,8 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  read_options:
-    name: 'read options'
+  read_params:
+    name: 'Load action parameters'
     runs-on: ubuntu-latest
     outputs:
       matrix: ${{ steps.load_matrix.outputs.matrix }}
@@ -40,13 +40,13 @@ jobs:
       id: load_matrix
       run: |
         echo "matrix=${{ env.MATRIX }}" >> "$GITHUB_OUTPUT"
-  test:
+  run:
     name: CMake v${{ matrix.cmake_version }}
     runs-on: ubuntu-latest
-    needs: read_options
+    needs: read_params
     strategy:
       fail-fast: false
-      matrix: ${{ fromJson(needs.read_options.outputs.matrix) }}
+      matrix: ${{ fromJson(needs.read_params.outputs.matrix) }}
     steps:
     - name: ⬇️ Setup CMake
       uses: lukka/get-cmake@latest
