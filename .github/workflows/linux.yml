@@ -41,14 +41,16 @@ jobs:
       run: |
         echo "matrix=${{ env.MATRIX }}" >> "$GITHUB_OUTPUT"
   run:
-    name: CMake v${{ matrix.cmake_version }}
+    name: CMake v${{ matrix.cmake_version }} (${{ matrix.runs_on }})
     runs-on: ${{ matrix.runs_on }}
     needs: read_params
     strategy:
       fail-fast: false
       matrix: ${{ fromJson(needs.read_params.outputs.matrix) }}
     steps:
-    - name: ⬇️ Setup CMake
+    - name: 📥 Checkout
+      uses: actions/checkout@v4
+    - name: ⬇️ Setup CMake v${{ matrix.cmake_version }}
       uses: lukka/get-cmake@latest
       with:
         cmakeVersion: ~${{ matrix.cmake_version }}
