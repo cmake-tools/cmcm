@@ -93,7 +93,7 @@ jobs:
           CMAKE_BUILD_TYPE:STRING=${{ env.CMAKE_BUILD_TYPE }}
 
     - name: 🛠️ run-cmake (build)
-      uses: ./
+      uses: cmake-tools/run-cmake@v0-alpha
       id: build
       with:
         mode: build
@@ -101,7 +101,7 @@ jobs:
         build_verbose: true
 
     - name: 📥 run-cmake (install)
-      uses: ./
+      uses: cmake-tools/run-cmake@v0-alpha
       id: install
       with:
         mode: install
