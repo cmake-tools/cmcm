@@ -18,6 +18,8 @@ jobs:
     outputs:
       matrix: ${{ steps.load_matrix.outputs.matrix }}
     steps:
+    - name: 📥 Checkout
+      uses: actions/checkout@v4
     - name: 📂 Load .env file
       if: hashFiles('.github/workflows/.env') != ''
       uses: xom9ikk/dotenv@v2
@@ -41,8 +43,6 @@ jobs:
       fail-fast: false
       matrix: ${{ fromJson(needs.read_options.outputs.matrix) }}
     steps:
-    - name: 📥 Checkout
-      uses: actions/checkout@v4
     - name: ⬇️ Setup CMake
       uses: lukka/get-cmake@latest
       with:
