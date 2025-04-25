@@ -19,16 +19,16 @@ jobs:
       matrix: ${{ steps.load_matrix.outputs.matrix }}
     steps:
     - name: 📂 Load .env file
-      if: hashFiles('.github/workflows/.env') != ''
       uses: xom9ikk/dotenv@v2
       with:
         path: .github/workflows
+        load-mode: skip
     - name: 📂 Load .env.${{ github.workflow }} file
-      if: hashFiles('.github/workflows/.env.${{ github.workflow }}') != ''
       uses: xom9ikk/dotenv@v2
       with:
         path: .github/workflows
         mode: ${{ github.workflow }}
+        load-mode: strict
     - name: load matrix
       id: load_matrix
       run: |
