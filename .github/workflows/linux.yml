@@ -16,7 +16,7 @@ jobs:
     name: 'Prepare'
     runs-on: ubuntu-latest
     outputs:
-      matrix: ${{ steps.json.outputs.matrix }}
+      matrix: ${{ steps.create_matrix.outputs.matrix }}
     steps:
     - name: 📥 Checkout
       uses: actions/checkout@v4
@@ -26,6 +26,7 @@ jobs:
       with:
         path: .github/workflows
     - name: create matrix
+      id: create_matrix
       run: |
         echo "matrix=${{ env.MATRIX }}" >> "$GITHUB_OUTPUT"
   test:
