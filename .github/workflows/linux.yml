@@ -91,6 +91,8 @@ jobs:
         list_cache_variables: advanced_help
         variables: |
           CMAKE_BUILD_TYPE:STRING=${{ env.CMAKE_BUILD_TYPE }}
+          CMCM_BUILD_DOCS:BOOL=${{ env.BUILD_DOCS }}
+
 
     - name: 🛠️ run-cmake (build)
       uses: cmake-tools/run-cmake@v0-alpha
