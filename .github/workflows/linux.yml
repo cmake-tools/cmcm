@@ -25,8 +25,13 @@ jobs:
       uses: xom9ikk/dotenv@v2
       with:
         path: .github/workflows
+    - name: Check .env.${{ github.workflow }} file existence
+      id: check_file
+      uses: andstor/file-existence-action@v3
+      with:
+        files: .github/workflows/.env.${{ github.workflow }}
     - name: 📂 Load .env.${{ github.workflow }} file
-      if: hashFiles(".github/workflows/.env.${{ github.workflow }}") != ''
+      if: steps.check_file.outputs.files_exists == 'true'
       uses: xom9ikk/dotenv@v2
       with:
         path: .github/workflows
