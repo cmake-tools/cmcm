@@ -42,7 +42,7 @@ jobs:
         echo "matrix=${{ env.MATRIX }}" >> "$GITHUB_OUTPUT"
   run:
     name: CMake v${{ matrix.cmake_version }}
-    runs-on: ${{ matrix.runs-on }}
+    runs-on: ${{ matrix.runs_on }}
     needs: read_params
     strategy:
       fail-fast: false
