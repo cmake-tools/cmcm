@@ -24,7 +24,7 @@ jobs:
       if: hashFiles('.github/workflows/env/.env') != ''
       uses: xom9ikk/dotenv@v2
       with:
-        path: .github/workflows
+        path: .github/workflows/env
     - name: Check .env.${{ github.workflow }} file existence
       id: check_file
       uses: andstor/file-existence-action@v3
@@ -34,7 +34,7 @@ jobs:
       if: steps.check_file.outputs.files_exists == 'true'
       uses: xom9ikk/dotenv@v2
       with:
-        path: .github/workflows
+        path: .github/workflows/env
         mode: ${{ github.workflow }}
     - name: load matrix
       id: load_matrix
