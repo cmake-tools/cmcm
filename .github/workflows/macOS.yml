@@ -56,7 +56,7 @@ jobs:
     steps:
 
     - name: 📥 Checkout
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
 
     - name: ⬇️ Set up curl CA bundle for CMake to work with https
       run: echo SSL_CERT_FILE=/opt/local/share/curl/curl-ca-bundle.crt >> $GITHUB_ENV
