@@ -28,14 +28,14 @@ Options
 ^^^^^^^
 
 .. cmake:variable:: SHALLOW
-  
-  When this option is enabled, the git clone operation will be given the --depth 1 option. 
+
+  When this option is enabled, the git clone operation will be given the --depth 1 option.
   This performs a shallow clone, which avoids downloading the whole history and instead retrieves just the commit denoted by the GIT_TAG option.
 
 .. cmake:variable:: PROGRESS
 
-  When enabled, this option instructs the git clone operation to report its progress by passing it the --progress option. 
-  Without this option, the clone step for large projects may appear to make the build stall, since nothing will be logged until the clone operation finishes. 
+  When enabled, this option instructs the git clone operation to report its progress by passing it the --progress option.
+  Without this option, the clone step for large projects may appear to make the build stall, since nothing will be logged until the clone operation finishes.
   While this option can be used to provide progress to prevent the appearance of the build having stalled, it may also make the build overly noisy if lots of external projects are used.
 
 .. cmake:variable:: EXCLUDE_FROM_ALL
@@ -49,10 +49,10 @@ Options
 .. versionadded:: 3.25
 
 
-  If the SYSTEM argument is provided, the SYSTEM directory property of a subdirectory added by FetchContent_MakeAvailable() will be set to true. 
-  This will affect non-imported targets created as part of that command. See the SYSTEM target property documentation for a more detailed discussion of the effects. 
+  If the SYSTEM argument is provided, the SYSTEM directory property of a subdirectory added by FetchContent_MakeAvailable() will be set to true.
+  This will affect non-imported targets created as part of that command. See the SYSTEM target property documentation for a more detailed discussion of the effects.
 
-.. cmake:variable:: TAG <tag> 
+.. cmake:variable:: TAG <tag>
 
   The git tag to download :variable:`CPM_TAG` takes precedence if defined. (v0.42.1 by default).
 
@@ -66,7 +66,7 @@ Variables
 :variable:`CPM_REPOSITORY`
 
   URL of the CPM repository to download. Takes precedence over the REPOSITORY argument.
-  
+
 :variable:`CPM_TAG`
 
   TAG of the CPM repository to download. Takes precedence over the TAG argument.
@@ -102,6 +102,7 @@ function(cpm)
   endif()
   colorize()
   set(CPM_INDENT "${CMCM_FG_CYAN}[cpm]" PARENT_SCOPE)
+  ## Change default message
   function(cpm_message)
     colorize()
     message(${ARGV}${CMCM_RESET_STYLE})
@@ -111,7 +112,7 @@ function(cpm)
   endif()
   if(CMAKE_VERSION VERSION_GREATER_EQUAL 3.25)
     set(EXCLUDE_FROM_ALL_ARGS "EXCLUDE_FROM_ALL ${ARG_EXCLUDE_FROM_ALL}")
-endif()
+  endif()
   FetchContent_Declare(CPM GIT_REPOSITORY "${ARG_REPOSITORY}" GIT_TAG "${ARG_TAG}" GIT_SHALLOW "${ARG_SHALLOW}" GIT_PROGRESS "${ARG_PROGRESS}" "${SYSTEM_ARGS}" "${EXCLUDE_FROM_ALL_ARGS}")
   if(NOT COMMAND CPMAddPackage)
     missive(STATUS "${CMCM_INFO_COLOR}[cmcm:cpm] Adding cpm@${ARG_TAG} (${ARG_TAG})")
