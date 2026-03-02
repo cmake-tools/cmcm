@@ -4,4 +4,6 @@ Modules
 .. toctree::
     :maxdepth: 1
 
-    /modules/Colors
+    /module/Colors
+    /module/Missives
+    /module/CPM

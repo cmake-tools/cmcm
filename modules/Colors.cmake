@@ -22,7 +22,7 @@ Detect color support of the terminal. This function respect the NO_COLOR env var
 
 .. code-block:: cmake
 
-  check_color_support(URL <url>)
+  check_color_support(VARIABLE <variable>)
 
 .. cmake:variable:: VARIABLE <variable>
 

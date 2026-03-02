@@ -6,7 +6,18 @@
 #
 # SPDX-License-Identifier: MIT
 #
+#
 
+#[=======================================================================[.rst:
+Missives
+--------
+
+Better alternative to CMake message command
+
+Functions
+^^^^^^^^^
+
+#]=======================================================================]
 include(Colors)
 colorize()
 
