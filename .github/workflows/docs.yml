@@ -54,7 +54,7 @@ jobs:
         cmake --install ${{ github.workspace }}/build --config Release
         cmake -E copy ${{ github.workspace }}/install/share/doc/pdf/cmcm.pdf ${{ github.workspace }}/install/share/doc/html/pdf/cmcm.pdf
     - name: Setup Pages
-      uses: actions/configure-pages@v5
+      uses: actions/configure-pages@v6
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v4
       with:
